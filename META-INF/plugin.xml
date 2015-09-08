@@ -1,12 +1,12 @@
 <idea-plugin version="2">
-  <id>org.root.GoogleIt</id>
-  <name>GoogleIt</name>
+  <id>org.root.HoogleIt</id>
+  <name>HoogleIt</name>
   <version>0.1</version>
   <vendor email="aistar.neron@gmail.com">ROOT</vendor>
 
   <description><![CDATA[
-     Google instant search. <br>
-     Use ctrl+shift+g to search selected text
+     Hoogle instant search. <br>
+     Use ctrl+shift+h to search selected text in Hoogle
       ]]></description>
 
   <change-notes><![CDATA[
@@ -34,9 +34,9 @@
 
   <actions>
     <!-- Add your actions here -->
-      <action id="GoogleItSelected" class="org.idea.plugin.GoogleIt.GoogleItSelected" text="Google selected text">
+      <action id="HoogleItSelected" class="org.idea.plugin.HoogleIt.HoogleItSelected" text="Hoogle selected text">
           <add-to-group group-id="EditorActions" anchor="last"/>
-          <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl G"/>
+          <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl H"/>
       </action>
   </actions>
 
