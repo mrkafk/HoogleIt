@@ -44,6 +44,13 @@ public class HoogleItSelected extends EditorAction {
             // get the range of the selected characters
             TextRange charsRange = new TextRange(selectionModel.getSelectionStart(), selectionModel.getSelectionEnd());
 
+            int selWidth = charsRange.getEndOffset() - charsRange.getEndOffset();
+
+            if(selWidth == 0) {
+                selectionModel.selectWordAtCaret(true);
+                charsRange = new TextRange(selectionModel.getSelectionStart(), selectionModel.getSelectionEnd());
+            }
+
             // get the string to search
             String searchText = document.getText().substring(charsRange.getStartOffset(), charsRange.getEndOffset());
 

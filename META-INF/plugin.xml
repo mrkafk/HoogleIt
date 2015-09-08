@@ -2,11 +2,12 @@
   <id>org.root.HoogleIt</id>
   <name>HoogleIt</name>
   <version>0.1</version>
-  <vendor email="aistar.neron@gmail.com">ROOT</vendor>
+  <vendor email="aistar.neron@gmail.com, mrkafk@gmail.com" url="https://github.com/mrkafk/HoogleIt">ROOT, Marcin Krol</vendor>
 
   <description><![CDATA[
      Hoogle instant search. <br>
-     Use ctrl+shift+h to search selected text in Hoogle
+     Use ctrl+shift+h to search selected text in Hoogle.
+     If no text is selected, the word under cursor is selected.
       ]]></description>
 
   <change-notes><![CDATA[
