@@ -1,11 +1,11 @@
 <idea-plugin version="2">
   <id>org.root.HoogleIt</id>
   <name>HoogleIt</name>
-  <version>0.1</version>
+  <version>0.2</version>
   <vendor email="aistar.neron@gmail.com, mrkafk@gmail.com" url="https://github.com/mrkafk/HoogleIt">ROOT, Marcin Krol</vendor>
 
   <description><![CDATA[
-     Hoogle instant search. <br>
+     Haskell - Hoogle instant search. <br>
      Use ctrl+shift+h to search selected text in Hoogle.
      If no text is selected, the word under cursor is selected.
       ]]></description>

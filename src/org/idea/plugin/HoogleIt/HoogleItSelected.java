@@ -44,7 +44,7 @@ public class HoogleItSelected extends EditorAction {
             // get the range of the selected characters
             TextRange charsRange = new TextRange(selectionModel.getSelectionStart(), selectionModel.getSelectionEnd());
 
-            int selWidth = charsRange.getEndOffset() - charsRange.getEndOffset();
+            int selWidth = charsRange.getEndOffset() - charsRange.getStartOffset();
 
             if(selWidth == 0) {
                 selectionModel.selectWordAtCaret(true);
