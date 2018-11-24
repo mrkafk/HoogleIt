@@ -1,23 +1,24 @@
-<idea-plugin version="2">
+<idea-plugin use-idea-classloader="true">
   <id>org.root.HoogleIt</id>
   <name>HoogleIt</name>
-  <version>0.3</version>
-  <vendor email="aistar.neron@gmail.com, mrkafk@gmail.com" url="https://github.com/mrkafk/HoogleIt">ROOT, Marcin Krol</vendor>
+  <version>0.4</version>
+  <vendor email="aistar.neron@gmail.com, mrkafk@gmail.com, dietz@smart-cactus.org" url="https://github.com/laura-dietz/HoogleIt">ROOT, Marcin Krol, Laura Dietz</vendor>
 
   <description><![CDATA[
      Haskell - Hoogle instant search. <br>
      Use ctrl+shift+h to search selected text in Hoogle.
      If no text is selected, the word under cursor is selected.
+     To search local hoogle instance, set environment variable $HOOGLE_URL to search URL (default is "http://hoogle.haskell.org/?hoogle=")
       ]]></description>
 
   <change-notes><![CDATA[
-      Init<br>
-      <small>most HTML tags may be used</small>
+      Init
+      0.4: make hoogle url configurable; update to new idea plugin infrastructure; use gradle
       ]]>
   </change-notes>
 
   <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Build+Number+Ranges for description -->
-  <idea-version since-build="107.105"/>
+  <idea-version since-build="173"/>
 
   <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
        on how to target different products -->
