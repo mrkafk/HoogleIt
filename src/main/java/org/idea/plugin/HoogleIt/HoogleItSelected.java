@@ -14,8 +14,10 @@ import java.net.*;
  * Created by #ROOT
  * Date: 20.02.14
  * Time: 20:35
+ * Updated by Laura Dietz, Nov 24, 2018:  Read Hoogle URL from environment variable HOOGLE_URL
  * Contact me: alistar.neron@gmail.com
  * Contact me: mrkafk@gmail.com
+ * Contact me: dietz@smart-cactus.org
  */
 public class HoogleItSelected extends EditorAction {
 
@@ -56,7 +58,14 @@ public class HoogleItSelected extends EditorAction {
 
             if( searchText.length() < 1 ) return;
             try {
-                String headerUrl = "https://www.haskell.org/hoogle/?hoogle=";
+                String headerUrlDefault = "https://www.haskell.org/hoogle/?hoogle=";
+		String headerUrl = "";
+		try {
+			headerUrl= System.getenv().containsKey("HOOGLE_URL")?System.getenv("HOOGLE_URL"):headerUrlDefault;
+		} catch (java.lang.SecurityException ex) {
+			System.err.println("Security prevents access to environment variable \"HOOGLE_URL\". Using default \""+headerUrlDefault+"\". ");
+			headerUrl = headerUrlDefault;
+		} 
                 String encodedUrl = URLEncoder.encode(searchText.replaceAll("\n", ""),"UTF-8");
 
                 GHandler.openURI(new URL(headerUrl+encodedUrl).toURI());
